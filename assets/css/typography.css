@@ -168,7 +168,7 @@ p {
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     .selector li {
         font-size: .9rem;
         padding: 12px 24px;
