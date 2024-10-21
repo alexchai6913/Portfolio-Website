@@ -741,6 +741,9 @@ a.btn {
     display: block;
 }
 
+section {
+    padding-block: 2rem;
+}
 
 @media screen and (max-width: 426px) {
     section > *:not(.ignorePadding) {
