@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
 
     <style>
         header {
@@ -21,7 +21,6 @@
             align-items: center;
             color: var(--dark2);
 
-
             background-color: var(--primary-50)
         }
 
@@ -30,7 +29,7 @@
         }
 
         section>* {
-            padding: 2rem;
+            padding-inline: 2rem;
         }
 
         .social-links-wrapper a {
@@ -42,21 +41,25 @@
 
         .social-links-wrapper {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
             align-items: center;
-            justify-content: center;
 
-            position: fixed;
-            top: 50%;
-            right: calc((100vw - var(--max-width)) / 2 + 1.5rem);
-
-            transform: translateY(-50%);
         }
 
-        @media screen and (max-width: 1440px) {
-            .social-links-wrapper {
-                right: 1.5rem;
+        .about-wrapper {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #about {
+            padding-block: 3rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-wrapper {
+                flex-direction: column;
             }
         }
     </style>
@@ -106,17 +109,17 @@
     <section id="hero">
         <div class="hero-wrapper container">
             <p class="subheading2 mb-2">Hi There👋</p>
-            <h1 class="mb-2">I am Alex Chai</h1>
+            <h1 class="mb-0">I am Alex Chai</h1>
 
-            <p class="mb-5 lead">A passionate <span class="">web developer</span> and <span>graphic designer</span> with
+            <p class="lead mb-4">A passionate <span class="">web developer</span> and <span>graphic designer</span> with
                 a mission to turn beautiful
                 designs into interactive experiences</p>
 
             <div class="btn-wrapper">
                 <a class="btn btn-secondary" href="">
-                    Download Resume
+                    Download My CV
                 </a>
-                <a class="btn btn-primary" href="#projects">
+                <a class="btn btn-primary" onclick="lenis.scrollTo('#projects')">
                     <span class="material-symbols-rounded btn-icon btn-leading-icon">
                         arrow_downward
                     </span>
@@ -134,35 +137,52 @@
             </div>
 
 
-            <!-- <div class="social-links-wrapper" aria-label="Social Links">
-                <a href="https://www.linkedin.com/in/alexchai6913" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="mailto:alexchai6913@gmail.com" aria-label="Email">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
-                <a href="https://github.com/alexchai97" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div> -->
+
         </div>
     </section>
 
     <section id="about">
-        <div class="container">
-            <span class="subheading3 text-primary mb-2">About me</span>
-            <h2 class="mb-2">Let's face it, the internet needs more awesome websites</h2>
-            <p class="mb-3"> I'm Alex, and I'm on a mission to build them!
-                Fresh out of my Multimedia Computing program, I'm bringing a blend of technical skills and design
-                sensibilities to every project I tackle. Turning designs into engaging, interactive websites—that's what
-                gets me going. I've always loved the challenge of building something beautiful and functional from the
-                ground up, and I can't wait to bring that passion to a creative team.</p>
+        <div class="container about-wrapper">
+            <img src="assets\img\Profile Pic-popup.png" alt="Alex Chai" height="400">
+            <div class="text">
+                <span class="subheading3 text-primary mb-4">About me</span>
+                <h2 class="mb-3">Let's face it, the internet needs more awesome websites</h2>
 
-            <p>
-                Beyond coding, I'm a design enthusiast with a keen eye for aesthetics. My background in Multimedia
-                Computing and the Adobe Creative Suite empowers
-                me to create visually stunning and cohesive experiences.
-            </p>
+                <div class="paragraph mb-4">
+                    <p class="mb-2"> I'm Alex Chai, and I'm on a mission to build them!
+                        Fresh out of my Multimedia Computing Degree programme, I'm bringing a blend of technical skills
+                        and
+                        design
+                        sensibilities to every project I tackle. Turning designs into engaging, interactive
+                        websites—that's
+                        what
+                        gets me going. I've always loved the challenge of building something beautiful and functional
+                        from
+                        the
+                        ground up, and I can't wait to bring that passion to a creative team.</p>
+
+                    <p>
+                        Beyond coding, I'm a design enthusiast with a keen eye for aesthetics. My background in
+                        Multimedia
+                        Computing and the Adobe Creative Suite empowers
+                        me to create visually stunning and cohesive experiences.
+                    </p>
+                </div>
+
+
+                <div class="social-links-wrapper" aria-label="Social Links">
+                    <a href="https://www.linkedin.com/in/alexchai6913" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:alexchai6913@gmail.com" aria-label="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/alexchai97" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -209,6 +229,8 @@
     <script src="assets/js/buttonAnimate.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/cursor.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
