@@ -2,6 +2,7 @@
 @import url('button.css');
 @import url('navbar.css');
 @import url('selector.css');
+@import url('preloader.css');
 @import url('cursor.css');
 @import url('https://unpkg.com/lenis@1.1.14/dist/lenis.css');
 
@@ -738,4 +739,37 @@ a.btn {
 
 .d-block {
     display: block;
+}
+
+
+@media screen and (max-width: 426px) {
+    section > *:not(.ignorePadding) {
+        padding-inline: .5rem;
+    }
+
+    section * {
+        text-align: center;
+    }
+
+    .btn-wrapper, .social-links-wrapper {
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+@media (pointer: coarse) {
+    .noSelect {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .noSelect:focus {
+        outline: none !important;
+    }
+
 }

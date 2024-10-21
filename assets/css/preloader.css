@@ -1,0 +1,47 @@
+#preloader {
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    z-index: 100;
+
+    top: 0;
+    left: 0;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-inline: 1rem;
+}
+
+#preloader .btn-primary {
+    margin: 0 auto;
+}
+
+#preloader-title {
+    color: var(--primary-400);
+}
+
+#preloader-text {
+    color: white;
+    margin-bottom: var(--spacer-3);
+}
+
+#preloader-wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100dvw;
+}
+
+
+#preloader-bg {
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-800);
+    z-index: -1;
+}

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alex Chai - Web Developer</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
@@ -16,20 +16,25 @@
         }
 
         #hero {
-            height: 70vh;
+            height: calc(100% + 65px);
             display: flex;
             align-items: center;
             color: var(--dark2);
 
-            background-color: var(--primary-50)
+            background-color: var(--primary-50);
+
+            position: relative;
+
+            padding-block: 1rem;
+
+            min-height: 50vh;
+
         }
 
         .hero-wrapper {
             position: relative;
-        }
-
-        section>* {
             padding-inline: 2rem;
+            z-index: 1;
         }
 
         .social-links-wrapper a {
@@ -43,7 +48,6 @@
             display: flex;
             gap: 1.5rem;
             align-items: center;
-
         }
 
         .about-wrapper {
@@ -57,10 +61,31 @@
             padding-block: 3rem;
         }
 
-        @media screen and (max-width: 768px) {
+        #about img {
+            object-fit: contain;
+            width: 305.29px;
+        }
+
+        @media screen and (max-width: 425px) {
+            #about img {
+                object-fit: contain;
+                width: 60vw;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
             .about-wrapper {
                 flex-direction: column;
             }
+        }
+
+        #wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 0;
+            background: #fff;
         }
     </style>
 
@@ -109,13 +134,13 @@
     <section id="hero">
         <div class="hero-wrapper container">
             <p class="subheading2 mb-2">Hi There👋</p>
-            <h1 class="mb-0">I am Alex Chai</h1>
+            <h1 id="#hero-heading" class="mb-0">I am Alex Chai</h1>
 
             <p class="lead mb-4">A passionate <span class="">web developer</span> and <span>graphic designer</span> with
                 a mission to turn beautiful
                 designs into interactive experiences</p>
 
-            <div class="btn-wrapper">
+            <div class="btn-wrapper" style="margin-bottom: 65px;">
                 <a class="btn btn-secondary" href="">
                     Download My CV
                 </a>
@@ -135,15 +160,14 @@
                     <span class="decor-circle"></span>
                 </a>
             </div>
-
-
-
         </div>
+
+        <img src="/assets/img/wave-hero.svg" alt="decor" id="wave" class="ignorePadding">
     </section>
 
     <section id="about">
         <div class="container about-wrapper">
-            <img src="assets\img\Profile Pic-popup.png" alt="Alex Chai" height="400">
+            <img src="/assets/img/Profile Pic-popup.png" alt="Alex Chai">
             <div class="text">
                 <span class="subheading3 text-primary mb-2 d-block">About me</span>
                 <h2 class="mb-3">Let's face it, the internet needs more awesome websites</h2>
@@ -226,6 +250,31 @@
 
 
     <div class="circle"></div>
+    <div id="preloader">
+        <div id="preloader-wrapper">
+            <p id="preloader-title">Something exciting is brewing... ✨ </p>
+            <h1 id="preloader-text">Peek behind the curtain?</h1>
+
+            <a id="preloader-btn" class="btn btn-primary" onclick="">
+                <span class="material-symbols-rounded btn-icon btn-leading-icon">
+                    visibility
+                </span>
+
+                <p class="btn-text">
+                    Sneak a Peek
+                </p>
+
+                <span class="material-symbols-rounded btn-icon btn-trailing-icon">
+                    arrow_upward
+                </span>
+
+                <span class="decor-circle"></span>
+            </a>
+        </div>
+
+        <div id="preloader-bg"></div>
+        <img src="/assets/img/wave-pri-950.svg" alt="decor" id="preloader-wave">
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -234,6 +283,7 @@
 
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
 
+    <script src="assets/js/preloader.js"></script>
     <script src="assets/js/buttonAnimate.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/cursor.js"></script>

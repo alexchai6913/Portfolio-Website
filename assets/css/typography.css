@@ -166,3 +166,22 @@ p {
 .text-primary {
     color: var(--primary);
 }
+
+
+@media screen and (max-width: 425px) {
+    .selector li {
+        font-size: .9rem;
+        padding: 12px 24px;
+    }
+
+    :root {
+        --fsz-h1: 2.6458rem;
+        --fsz-h2: 1.75rem;
+        --fsz-h3: 1.3333rem;
+        --fsz-h4: 1.1667rem;
+        --fsz-h5: 1rem;
+        --fsz-h6: 1rem;
+        --fsz-small: 0.7708rem;
+        --fsz-tiny: 0.6667rem;
+    }
+}
