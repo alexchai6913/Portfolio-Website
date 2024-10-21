@@ -45,16 +45,31 @@
 @media screen and (max-width: 768px) {
     .nav-wrapper {
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 0;
-        left: 100%;
+        left: 0;
+        z-index: 5;
         background-color: var(--primary-700);
         padding: 5rem;
+
+        transform: translateX(150%);
+        opacity: 0;
 
         width: 100vw;
         height: 100dvh;
     }
 
+    .link-wrapper {
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+   
     #menu {
         display: block;
     }
