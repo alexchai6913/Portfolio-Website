@@ -154,9 +154,13 @@ sup {
 }
 
 .lead {
-    color: var(--dark-700);
+    color: var(--dark-600);
     font-size: var(--fsz-h5);
     font-weight: 600;
+}
+
+p {
+    color: var(--dark-600);
 }
 
 .text-primary {
