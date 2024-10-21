@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chai - Web Developer</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+
+    <style>
+        header {
+            background-color: var(--primary-50)
+        }
+
+        #hero {
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            color: var(--dark2);
+
+
+            background-color: var(--primary-50)
+        }
+
+        .hero-wrapper {
+            position: relative;
+        }
+
+        section>* {
+            padding: 2rem;
+        }
+
+        .social-links-wrapper a {
+            text-decoration: none;
+            color: var(--primary-700);
+            font-size: 2rem;
+        }
+
+
+        .social-links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+
+            position: fixed;
+            top: 50%;
+            right: calc((100vw - var(--max-width)) / 2 + 1.5rem);
+
+            transform: translateY(-50%);
+        }
+
+        @media screen and (max-width: 1440px) {
+            .social-links-wrapper {
+                right: 1.5rem;
+            }
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar container">
+            <a href="/" class="logo">
+                <img src="assets/img/logo-horizontal.png" alt="Logo" height="32" />
+            </a>
+
+            <ul class="nav-wrapper">
+                <li class="link-wrapper"><a class="nav-link" href="#">About</a></li>
+                <li class="link-wrapper"><a class="nav-link" href="#">Projects</a></li>
+
+                <a class="btn btn-primary ms-3" href="https://linkedin.com/in/alexchai6913">
+                    <span class="material-symbols-rounded btn-icon btn-leading-icon">
+                        arrow_forward
+                    </span>
+
+                    <p class="btn-text">
+                        Let's connect
+                    </p>
+
+                    <span class="material-symbols-rounded btn-icon btn-trailing-icon">
+                        handshake
+                    </span>
+
+                    <span class="decor-circle"></span>
+                </a>
+
+            </ul>
+
+            <span id="menu" class="hamburger material-symbols-rounded ">menu</span>
+        </nav>
+    </header>
+
+
+    <section id="hero">
+        <div class="hero-wrapper container">
+            <p class="subheading2 mb-2">Hi There👋</p>
+            <h1 class="mb-2">I am Alex Chai</h1>
+
+            <p class="mb-5 lead">A passionate <span class="">web developer</span> and <span>graphic designer</span> with
+                a mission to turn beautiful
+                designs into interactive experiences</p>
+
+            <div class="btn-wrapper">
+                <a class="btn btn-secondary" href="">
+                    Download Resume
+                </a>
+                <a class="btn btn-primary" href="#projects">
+                    <span class="material-symbols-rounded btn-icon btn-leading-icon">
+                        arrow_downward
+                    </span>
+
+                    <p class="btn-text">
+                        Explore My Works
+                    </p>
+
+                    <span class="material-symbols-rounded btn-icon btn-trailing-icon">
+                        question_mark
+                    </span>
+
+                    <span class="decor-circle"></span>
+                </a>
+            </div>
+
+
+            <!-- <div class="social-links-wrapper" aria-label="Social Links">
+                <a href="https://www.linkedin.com/in/alexchai6913" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:alexchai6913@gmail.com" aria-label="Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                <a href="https://github.com/alexchai97" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <span class="subheading3 text-primary mb-2">About me</span>
+            <h2 class="mb-2">Let's face it, the internet needs more awesome websites</h2>
+            <p class="mb-3"> I'm Alex, and I'm on a mission to build them!
+                Fresh out of my Multimedia Computing program, I'm bringing a blend of technical skills and design
+                sensibilities to every project I tackle. Turning designs into engaging, interactive websites—that's what
+                gets me going. I've always loved the challenge of building something beautiful and functional from the
+                ground up, and I can't wait to bring that passion to a creative team.</p>
+
+            <p>
+                Beyond coding, I'm a design enthusiast with a keen eye for aesthetics. My background in Multimedia
+                Computing and the Adobe Creative Suite empowers
+                me to create visually stunning and cohesive experiences.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <span class="subheading3 text-primary">My Works</span>
+            <h2 class="mb-2">Some of My Recent Works</h2>
+
+        </div>
+    </section>
+
+
+    <section id="services">
+        <div class="container">
+            <span class="subheading3 text-primary">My Services</span>
+            <h2 class="mb-2">What I Can Do For You </h2>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <span class="subheading3 text-primary">My Skillset</span>
+            <h2 class="mb-2">My Toolbox</h2>
+
+        </div>
+    </section>
+
+    <section id="CTA">
+        <div class="container">
+            <span class="subheading3 text-primary">Contact me</span>
+            <h2 class="mb-2">Let's Get Started</h2>
+
+        </div>
+    </section>
+
+
+    <div class="circle"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="assets/js/buttonAnimate.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/cursor.js"></script>
+</body>
+
+</html>

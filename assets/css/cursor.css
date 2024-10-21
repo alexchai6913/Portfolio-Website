@@ -1,0 +1,23 @@
+.circle {
+
+    --size: 40px;
+    --offset: calc(-0.5 * var(--size));
+
+    position: fixed;
+
+    pointer-events: none;
+
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    border: 2px solid darkslateblue;
+
+    top: var(--offset);
+    left: var(--offset);    
+}
+
+@media (pointer: coarse) and (hover: none) {
+    .circle {
+        display: none;
+    }
+}

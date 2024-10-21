@@ -1,0 +1,96 @@
+.btn-primary {
+    position: relative;
+    border-radius: 100rem;
+
+
+    letter-spacing: -0.025em;
+
+    background-color: #fff;
+    color: var(--dark2);
+
+    user-select: none;
+
+    transition-duration: 300ms;
+
+    overflow: hidden;
+}
+
+.btn-icon {
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100%;
+    padding: 2px;
+
+
+    aspect-ratio: 1;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.btn-leading-icon {
+    font-size: 1rem;
+    background-color: var(--primary-700);
+}
+
+.btn-trailing-icon {
+    font-size: 1rem;
+    position: absolute;
+
+    opacity: 0;
+
+    left: calc(100% + var(--spacer-1));
+    background-color: white;
+    color: var(--primary-700);
+}
+
+.decor-circle {
+    border-radius: 100%;
+    display: block;
+    background-color: var(--primary-700);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.btn-text,
+.btn-icon {
+    z-index: 2;
+}
+
+.btn-secondary {
+
+    background-color: var(--primary-700);
+    color: white !important;
+    border-radius: 48px;
+    transition: cubic-bezier(.4, .05, 0, 1) 300ms;
+
+}
+
+.btn-secondary:hover {
+    transition: cubic-bezier(.4, .05, 0, 1) 500ms;
+    box-shadow: var(--primary-400) 0 0 16px;
+
+}
+
+.btn {
+    width: max-content;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: var(--spacer-2);
+
+    padding-inline: var(--spacer-3);
+}
