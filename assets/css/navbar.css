@@ -43,7 +43,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .nav-wrapper {
+    #nav-wrapper{
         flex-direction: column;
         position: fixed;
         top: 0;

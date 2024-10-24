@@ -92,6 +92,8 @@ h6 {
     --primary-900: #363a72;
     --primary-950: #242547;
 
+    --accent-700: #f6aa59;
+
 
     --light: var(--primary-300);
     --primary: var(--primary-700);

@@ -12,7 +12,7 @@ const navbarTL = gsap.timeline({
 
 navbarTL.pause();
 
-navbarTL.to([navWrapper],
+navbarTL.to(navWrapper,
     {
         x: 0,
         opacity: 1,
@@ -52,40 +52,30 @@ window.addEventListener('resize', handleResize);
 window.addEventListener('orientationchange', handleResize);
 
 function handleResize() {
+    menuActive = false;
 
-    if (window.innerWidth > 768 && menuActive) {
-        toggleMenu();
-        // Check if the menu button is not visible
-        if (window.getComputedStyle(menuBtn).display === 'none') {
+    // Remove styles from menuBtn
+    menuBtn.removeAttribute('style');
 
-            navWrapper.style.display = 'none';
+    // Remove styles from navWrapper
+    navWrapper.removeAttribute('style');
 
-            gsap.to(navWrapper, {
-                x: 0,
-                opacity: 1,
-                duration: 0.6
-            });
-            gsap.to('.nav-link', {
-                x: 0,
-                padding: 0
-            });
-
-            navbarTL.reverse().eventCallback("onReverseComplete", () => {
-                navWrapper.style.display = 'absolute';
-            });
-
-        }
-    }
+    // Remove styles from all .nav-links elements
+    const navLinks = document.querySelectorAll('.nav-links');
+    navLinks.forEach(link => {
+        link.removeAttribute('style');
+    });
 }
-
 
 const smoothScroll = (target) => {
 
     if (menuActive && window.getComputedStyle(menuBtn).display !== 'none') {
         toggleMenu();
+
+        // Wait until menu is closed before scroll
         setTimeout(() => {
             lenis.scrollTo(target);
-        }, 200); // Wait until menu is closed before scroll
+        }, 200);
     } else {
         lenis.scrollTo(target);
     }

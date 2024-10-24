@@ -32,12 +32,12 @@ preloadBtn.addEventListener('click', () => {
     preloadTL.play();
 });
 
-document.body.style.overflow = 'hidden';
+document.body.style.overflowY = 'hidden';
 
 function toggleOverflow() {
-    if (document.body.style.overflow === 'hidden') {
-        document.body.style.overflow = 'visible';
+    if (document.body.style.overflowY === 'hidden') {
+        document.body.style.overflowY = 'visible';
     } else {
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflowY = 'hidden';
     }
 }
