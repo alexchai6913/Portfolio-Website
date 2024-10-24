@@ -2,7 +2,6 @@
     position: relative;
     border-radius: 100rem;
 
-
     letter-spacing: -0.025em;
 
     background-color: #fff;
@@ -16,7 +15,8 @@
 }
 
 .btn-text {    
-    color: var(--dark2);
+    color: var(--dark2);    
+    font-weight: 600;
 }
 
 .btn-icon {
