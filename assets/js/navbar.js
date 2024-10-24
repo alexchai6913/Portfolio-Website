@@ -52,19 +52,29 @@ window.addEventListener('resize', handleResize);
 window.addEventListener('orientationchange', handleResize);
 
 function handleResize() {
-    refreshMenu();
 
-    // Check if menu is active and menu button is not visible
-    if (window.getComputedStyle(menuBtn).display === 'none') {
-        gsap.to(navWrapper, {
-            x: 0,
-            opacity: 1,
-            duration: 0.6
-        });
-        gsap.to('.nav-link', {
-            x: 0,
-            padding: 0
-        });
+    if (window.innerWidth > 768 && menuActive) {
+        toggleMenu();
+        // Check if the menu button is not visible
+        if (window.getComputedStyle(menuBtn).display === 'none') {
+
+            navWrapper.style.display = 'none';
+
+            gsap.to(navWrapper, {
+                x: 0,
+                opacity: 1,
+                duration: 0.6
+            });
+            gsap.to('.nav-link', {
+                x: 0,
+                padding: 0
+            });
+
+            navbarTL.reverse().eventCallback("onReverseComplete", () => {
+                navWrapper.style.display = 'absolute';
+            });
+
+        }
     }
 }
 
