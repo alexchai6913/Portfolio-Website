@@ -19,11 +19,11 @@
     margin: 0 auto;
 }
 
-#preloader-title {
+#preloader-text {
     color: var(--primary-400);
 }
 
-#preloader-text {
+#preloader-title {
     color: white;
     margin-bottom: var(--spacer-3);
 }
@@ -45,4 +45,11 @@
     left: 0;
     background-color: var(--primary-800);
     z-index: -1;
+}
+
+@media only screen and (max-height: 425px) {
+    #preloader-title {
+        line-height: 1;
+        font-size: var(--fsz-h2);
+    }
 }

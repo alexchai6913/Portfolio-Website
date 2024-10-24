@@ -1,8 +1,8 @@
-const circleElem = document.querySelector('.circle');
+const cursorElem = document.querySelector('.cursor');
 
 const mouse = { x: 0, y: 0 };
 const prevMouse = { x: 0, y: 0 };
-const circle = { x: 0, y: 0 };
+const cursor = { x: 0, y: 0 };
 let currentScale = 0;
 let currentAngle = 0;
 
@@ -14,10 +14,10 @@ window.addEventListener('mousemove', (e) => {
 const speed = 0.17;
 
 const tick = () => {
-    circle.x += (mouse.x - circle.x) * speed;
-    circle.y += (mouse.y - circle.y) * speed;
+    cursor.x += (mouse.x - cursor.x) * speed;
+    cursor.y += (mouse.y - cursor.y) * speed;
 
-    const posTransform = `translate(${circle.x}px, ${circle.y}px)`;
+    const posTransform = `translate(${cursor.x}px, ${cursor.y}px)`;
 
     //squeeze
     const dX = mouse.x - prevMouse.x;
@@ -51,7 +51,7 @@ const tick = () => {
     
     const rotTransform = `rotate(${currentAngle}deg)`;
 
-    circleElem.style.transform = `${posTransform} ${rotTransform} ${scaleTransform}`;
+    cursorElem.style.transform = `${posTransform} ${rotTransform} ${scaleTransform}`;
 
     window.requestAnimationFrame(tick);
 }

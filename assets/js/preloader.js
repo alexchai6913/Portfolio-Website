@@ -31,3 +31,13 @@ preloadTL.pause();
 preloadBtn.addEventListener('click', () => {
     preloadTL.play();
 });
+
+document.body.style.overflow = 'hidden';
+
+function toggleOverflow() {
+    if (document.body.style.overflow === 'hidden') {
+        document.body.style.overflow = 'visible';
+    } else {
+        document.body.style.overflow = 'hidden';
+    }
+}

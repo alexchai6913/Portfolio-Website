@@ -40,19 +40,10 @@
     }
 }
 
-
-
-@media (orientation: landscape) {
-    body {
-      flex-direction: row;
-    }
-  }
-  
-  @media (orientation: portrait) {
-    body {
-      flex-direction: column;
-    }
-  }
+html {
+    font-size: clamp(0.875rem, 0.125vw + 0.85rem, 1rem);
+    line-height: clamp(1.3rem, -0.012vw + 1.315rem, 1.313rem);
+}
 
 body {
     font-size: 1em;

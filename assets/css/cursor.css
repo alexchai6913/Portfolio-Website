@@ -1,4 +1,4 @@
-.circle {
+.cursor {
 
     --size: 40px;
     --offset: calc(-0.5 * var(--size));
@@ -10,14 +10,15 @@
     width: var(--size);
     height: var(--size);
     border-radius: 100%;
-    border: 2px solid darkslateblue;
+    border: 2px solid var(--primary-800);
 
     top: var(--offset);
     left: var(--offset);    
+    z-index: 1000;
 }
 
 @media (pointer: coarse) and (hover: none) {
-    .circle {
+    .cursor {
         display: none;
     }
 }
