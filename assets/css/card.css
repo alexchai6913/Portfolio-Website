@@ -1,0 +1,127 @@
+.card-wrapper * {
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    justify-content: start;
+    
+}
+
+.card {
+    display: block;
+    text-decoration: none;
+
+    height: 100%;
+    aspect-ratio: 3/4;
+    padding: 1.5rem;
+
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    border-radius: 1rem;
+
+    box-shadow: 0 0 16px #ddd;
+
+    cursor: pointer;
+}
+
+.card .mask {
+    transform: scale(1.2);
+    background: linear-gradient(0deg, #4148a3 20%, rgba(65, 72, 163, 0.3) 60%, rgba(65, 72, 163, 0) 100%);
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover .mask {
+    transform: scale(1.4);
+    filter: brightness(1.2);
+}
+
+.card:hover .card-img {
+    transform: scale(1.1);
+    filter: brightness(.95) grayscale(0);
+}
+
+.card-text {
+    align-self: end;
+    color: #fafafa;
+    z-index: 1;
+    width: 100%;
+}
+
+.card-title {
+    font-family: 'Geologica';
+    font-size: var(--fsz-h4);
+    color: white;
+}
+
+.card-caption {
+    opacity: .75;
+    color: white;
+    font-weight: 400;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 0px;
+    transform-origin: 50% 0;
+
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+
+    filter: brightness(.8) grayscale(.75);
+}
+
+.card-space {
+    padding-right: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+    .card-wrapper {        
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {        
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card-space {
+        padding: 0;
+    }
+}
+
+.card-wrapper:hover > :not(:hover) {
+    filter: grayscale(50%);
+    transition: filter 0.3s ease;
+    width: ;
+}

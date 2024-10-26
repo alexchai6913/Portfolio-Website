@@ -2,6 +2,7 @@
 @import url('button.css');
 @import url('navbar.css');
 @import url('selector.css');
+@import url('card.css');
 @import url('preloader.css');
 @import url('cursor.css');
 @import url('https://unpkg.com/lenis@1.1.14/dist/lenis.css');
@@ -28,11 +29,11 @@
 *************************/
 
 
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    transition-timing-function: cubic-bezier(.45, .05, 0, 1);
 }
 
 *,
@@ -74,6 +75,10 @@ h6 {
 #root,
 #__next {
     isolation: isolate;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 /********************
