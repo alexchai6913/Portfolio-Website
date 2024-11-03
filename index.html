@@ -37,6 +37,10 @@
             z-index: 1;
         }
 
+        .about-wrapper {
+            padding-inline: 2rem;
+        }
+
         .social-links-wrapper a {
             text-decoration: none;
             color: var(--primary-700);
@@ -150,7 +154,9 @@
                 designs into interactive experiences</p>
 
             <div class="btn-wrapper" style="margin-bottom: 65px;">
-                <a class="btn btn-secondary" href="https://drive.google.com/uc?export=download&id=1E5D_fkzGS9MS0RZ_GQcyRGB7AwcsJaqf" data-lead-icon="download">
+                <a class="btn btn-secondary"
+                    href="https://drive.google.com/uc?export=download&id=1E5D_fkzGS9MS0RZ_GQcyRGB7AwcsJaqf"
+                    data-lead-icon="download">
                     Download My CV
                 </a>
                 <a class="btn btn-primary" onclick="smoothScroll('#projects')">
@@ -178,7 +184,7 @@
         <div class="container about-wrapper">
             <img src="/assets/img/Profile Pic-popup.png" alt="Alex Chai">
             <div class="text">
-                <span class="subheading3 text-primary mb-2 d-block">About me</span>
+                <span class="subheading3 caption text-primary mb-2 d-block">About me</span>
                 <h2 class="mb-3">Let's face it, the internet needs more awesome websites</h2>
 
                 <div class="paragraph mb-4">
@@ -204,7 +210,8 @@
 
 
                 <div class="social-links-wrapper" aria-label="Social Links">
-                    <a class="social-links noSelect" href="https://www.linkedin.com/in/alexchai6913" aria-label="LinkedIn">
+                    <a class="social-links noSelect" href="https://www.linkedin.com/in/alexchai6913"
+                        aria-label="LinkedIn">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                     <a class="social-links noSelect" href="mailto:alexchai6913@gmail.com" aria-label="Email">
@@ -219,25 +226,87 @@
         </div>
     </section>
 
+    <section id="featured">
+        <span class="subheading3 caption text-primary text-center w-100 mb-2 d-block">My Works</span>
+        <h2 class="mb-4 text-center">Featured Projects</h2>
 
-    <section id="projects">
-        <div class="container">
-            <span class="subheading3 text-primary text-center w-100 mb-2 d-block">My Works</span>
-            <h2 class="mb-3 text-center">Some of My Recent Works</h2>
-            <!-- <div class="selector mb-4">
-                <div class="indicator"></div>
-                <li class="active" data-class="website">Websites</li>
-                <li data-class="ui-ux">UI / UX</li>
-                <li data-class="visual design">Visual Design</li>
-            </div> -->
-       
+        <div class="card-wrapper container">
+        <a class="card">
+            <div class="card-img-wrapper">
+                <img class="card-img" src="index.png" alt="">
+            </div>
+
+            <div class="card-content">
+                <div class="text">
+                    <h3 class="card-title">Smart Copier</h3>
+                    <span class="card-caption">Website</span>
+                </div>
+                <div class="link-underline">
+                    <span class="text">Visit</span>
+                    <span class="material-symbols-rounded icon">north_east</span>
+                </div>
+            </div>
+        </a>
+        <a class="card">
+            <div class="card-img-wrapper">
+                <img class="card-img" src="index.png" alt="">
+            </div>
+
+            <div class="card-content">
+                <div class="text">
+                    <h3 class="card-title">Smart Copier</h3>
+                    <span class="card-caption">Website</span>
+                </div>
+                <div class="link-underline">
+                    <span class="text">Visit</span>
+                    <span class="material-symbols-rounded icon">north_east</span>
+                </div>
+            </div>
+        </a>
+        <a class="card">
+            <div class="card-img-wrapper">
+                <img class="card-img" src="index.png" alt="">
+            </div>
+
+            <div class="card-content">
+                <div class="text">
+                    <h3 class="card-title">Smart Copier</h3>
+                    <span class="card-caption">Website</span>
+                </div>
+                <div class="link-underline">
+                    <span class="text">Visit</span>
+                    <span class="material-symbols-rounded icon">north_east</span>
+                </div>
+            </div>
+        </a>
+        <a class="card">
+            <div class="card-img-wrapper">
+                <img class="card-img" src="index.png" alt="">
+            </div>
+
+            <div class="card-content">
+                <div class="text">
+                    <h3 class="card-title">Smart Copier</h3>
+                    <span class="card-caption">Website</span>
+                </div>
+                <div class="link-underline">
+                    <span class="text">Visit</span>
+                    <span class="material-symbols-rounded icon">north_east</span>
+                </div>
+            </div>
+        </a>
+
         </div>
+
+
     </section>
 
-  
+
+
+
     <section id="skills">
         <div class="container">
-            <span class="subheading3 text-primary mb-2 d-block">My Skillset</span>
+            <span class="subheading3 caption text-primary mb-2 d-block">My Skillset</span>
             <h2 class="mb-2">Tools I Like To Use</h2>
 
         </div>
@@ -245,13 +314,17 @@
 
     <section id="CTA">
         <div class="container">
-            <span class="subheading3 text-primary mb-2 d-block">Contact me</span>
+            <span class="subheading3 caption text-primary mb-2 d-block">Contact me</span>
             <h2 class="mb-2">Let's Get Started</h2>
 
         </div>
     </section>
 
-    <div id="preloader">
+    <section id="Test">
+
+    </section>
+
+    <!-- <div id="preloader">
         <div id="preloader-wrapper">
             <p id="preloader-text">Something exciting is brewing... ✨ </p>
             <h1 id="preloader-title">Peek behind the curtain?</h1>
@@ -275,7 +348,7 @@
 
         <div id="preloader-bg"></div>
         <img src="/assets/img/wave-pri-950.svg" alt="decor" id="preloader-wave">
-    </div>
+    </div> -->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -291,8 +364,6 @@
     <script src="assets/js/pillSelector.js"></script>
     <script src="assets/js/script.js"></script>
 
-    <script>
-    </script>
 </body>
 
 </html>

@@ -171,9 +171,12 @@ sup {
 }
 
 .lead {
-    color: var(--dark-600);
     font-size: var(--fsz-h5);
     font-weight: 600;
+}
+
+.caption {
+    color: var(--primary-700);
 }
 
 p {
