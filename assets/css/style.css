@@ -36,10 +36,6 @@
 
 }
 
-* {
-    margin: 0;
-}
-
 img,
 picture,
 video,
@@ -124,10 +120,6 @@ body {
 }
 
 body {
-    font-family: "Space Grotesk";
-    font-weight: 700;
-
-    letter-spacing: -0.025em;
     width: 100dvw;
     overflow-x: hidden;
 

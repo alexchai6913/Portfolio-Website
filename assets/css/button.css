@@ -12,6 +12,10 @@
     transition-duration: 300ms;
 
     overflow: hidden;
+
+    
+    padding-block: var(--spacer-3);
+    padding-inline: var(--spacer-3); 
 }
 
 .btn-text {    
@@ -79,6 +83,9 @@
 
     display: flex;
     justify-content: center;
+
+    
+    padding: var(--spacer-3) var(--spacer-4);
 }
 
 .btn-secondary:hover {
@@ -114,8 +121,6 @@
     align-items: center;
     justify-content: baseline;
     gap: var(--spacer-2);
-
-    padding-inline: var(--spacer-3);
 }
 
 .social-links {

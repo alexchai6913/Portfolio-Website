@@ -1,9 +1,13 @@
+a.card {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
 .card-wrapper * {
     transition-timing-function: cubic-bezier(.35, .05, 0, 1);
     transition: 300ms;
 }
-
-
 
 .card-content {
     display: flex;
@@ -16,6 +20,8 @@
     margin-bottom: 1rem;
     border-radius: .5rem;
     overflow: hidden;
+
+    aspect-ratio: 16 / 9;
 }
 
 
@@ -85,4 +91,6 @@
 
 .card-caption {
     color: var(--primary-700);
+    font-weight: 700;
+    letter-spacing: -0.1px;
 }
